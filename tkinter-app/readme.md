@@ -1,59 +1,73 @@
-# Weather Prediction Application
 
-This is a simple weather prediction application built using Python and Tkinter. It allows users to enter information such as the date, precipitation, maximum temperature, minimum temperature, and wind speed. Based on these inputs, the application predicts the weather using a decision tree classifier.
+---
 
-## How to Run
+# 🌤️ Weather Prediction Application
 
-To run the application, follow these steps:
+A simple GUI-based weather prediction tool built with **Python** and **Tkinter**. It takes user input—such as date, precipitation, temperatures, and wind speed—and predicts the weather using a **Decision Tree Classifier** trained on historical data.
 
-1. Make sure you have Python installed on your system. You can download Python from the official website: https://www.python.org/downloads/
+---
 
-2. Clone this repository or download the `main.py` and `calculation.py` files to your local machine.
+## 🛠️ How to Run
 
-3. Open a terminal or command prompt and navigate to the directory where the files are located.
+1. **Install Python**: [python.org/downloads](https://www.python.org/downloads/)
+2. **Clone this repo** or download `main.py`, `calculation.py`, and `dataset.csv`.
+3. **Install dependencies**:
 
-4. Install the required dependencies by running the following command:
-
-   ```shell
+   ```bash
    pip install pandas numpy scikit-learn
    ```
+4. **Run the app**:
 
-5. Run the application by executing the following command:
-
-   ```shell
+   ```bash
    python main.py
    ```
 
-6. The application window will open, allowing you to enter the required information and click the "Predict" button to get the weather prediction.
+---
 
-## How It Works
+## ⚙️ How It Works
 
-The application uses a decision tree classifier to predict the weather based on the input provided by the user. Here's a brief overview of how it works:
+* User enters:
 
-1. The user is prompted to enter the date, precipitation, maximum temperature, minimum temperature, and wind speed.
+  * Date
+  * Precipitation
+  * Max/Min Temperature
+  * Wind Speed
+* Input is validated and processed.
+* A dataset (`dataset.csv`) is loaded, cleaned (IQR filtering, skew transformation), and label-encoded.
+* The **Decision Tree Classifier** is trained on this dataset.
+* Input is transformed similarly, then passed to the trained model.
+* **Predicted weather condition** is shown in the GUI.
 
-2. The application validates the input to ensure all fields are filled and numeric.
+---
 
-3. The input is processed and prepared for prediction. The `calculation.py` module is responsible for handling the input processing.
+## 📁 Project Structure
 
-4. The application loads a dataset from a CSV file (`dataset.csv`) containing historical weather data. The dataset is used to train the decision tree classifier.
+* `main.py` – GUI and event logic (Tkinter)
+* `calculation.py` – Data preprocessing and ML prediction
+* `dataset.csv` – Historical weather data
 
-5. The dataset is preprocessed to handle outliers using the Interquartile Range (IQR) method and transform skewed distributions in the "precipitation" and "wind" columns.
+---
 
-6. The "weather" column in the dataset is label-encoded to convert categorical weather labels into numerical values.
+## 🚀 Features
 
-7. The "date" column is converted to the datetime format and then to int64 format representing the timestamp of each date.
+* Easy-to-use Tkinter interface
+* Real-time prediction with a trained ML model
+* Data preprocessing: outlier removal, encoding, and scaling
+* Simple, customizable ML pipeline
 
-8. The input features are split into training and testing sets. The decision tree classifier is created and trained on the training data.
+---
 
-9. The user's input is processed and transformed using the same steps as during training.
+## 🧪 Future Improvements
 
-10. The trained decision tree classifier is used to make predictions on the new input.
+* Add support for other ML models (e.g., Random Forest)
+* Live weather API integration for dynamic predictions
+* Save user input/predictions to a local file or DB
 
-11. The predicted weather is displayed to the user.
+---
 
-12. The user can enter new inputs and click the "Predict" button to get updated weather predictions.
+## 📌 About
 
-That's it! You can now use the weather prediction application to get weather forecasts based on the provided input.
+A beginner-friendly project combining **GUI development** and **ML-based forecasting** to make weather prediction accessible and interactive.
 
-Feel free to customize and enhance the application as needed. Enjoy predicting the weather!
+---
+
