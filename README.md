@@ -91,7 +91,7 @@ These features are preprocessed and used to train classification models for weat
 
 ## 👨‍💻 Author
 
-Project by [Akrishna4](https://github.com/Akrishna4)) — updated and renamed to `weather-ml-predictor` for better clarity and presentation.
+Project by [Akrishna4](https://github.com/Akrishna4) — updated and renamed to `weather-ml-predictor` for better clarity and presentation.
 
 ---
 
