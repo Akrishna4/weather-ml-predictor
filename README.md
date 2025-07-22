@@ -77,7 +77,6 @@ These features are preprocessed and used to train classification models for weat
 
 * Accuracy
 * Confusion Matrix
-* Cross-Validation Score
 
 ---
 
